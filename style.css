@@ -53,6 +53,7 @@ body {
 }
 .hero-banner__button {
   color: var(--primary);
+  cursor: pointer;
   background-color: white;
   border: 0;
   border-radius: 1.5rem;
@@ -63,6 +64,10 @@ body {
   width: 100%;
   max-width: 12rem;
   padding: 0.75rem;
+}
+.hero-banner__button:hover {
+  background-color: var(--primary-light);
+  color: white;
 }
 .footer {
   margin: 1.5rem auto 0;
@@ -78,6 +83,9 @@ body {
 .footer__socials-icon {
   color: white;
   font-size: 2rem;
+}
+.footer__socials-icon:hover {
+  color: var(--primary-light);
 }
 .footer__attribution {
   font-size: 11px;
