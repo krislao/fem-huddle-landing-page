@@ -5,9 +5,10 @@
   --fw-semibold: 600;
   --ff-headings: "Poppins", sans-serif;
   --ff-body: "Open Sans", sans-serif;
-  --fs-headings: 1.5rem;
-  --fs-body: 1rem;
+  --fs-headings-sm: 1.5rem;
+  --fs-body-sm-sm: 1rem;
   --fs-button: 0.875rem;
+  --fs-headings-lg: 2rem;
 }
 body {
   display: flex;
@@ -18,6 +19,7 @@ body {
 .main,
 .footer {
   width: calc(100% - 4.5rem);
+  max-width: 80rem;
 }
 .header {
   margin: 2rem auto 0;
@@ -36,15 +38,16 @@ body {
 }
 .hero-banner__image {
   margin: 0 auto;
+  object-fit: contain;
 }
 .hero-banner__header {
   font-family: var(--ff-headings);
-  font-size: var(--fs-headings);
+  font-size: var(--fs-headings-sm);
   margin-bottom: 1rem;
 }
 .hero-banner__description {
   font-family: var(--ff-body);
-  font-size: var(--fs-body);
+  font-size: var(--fs-body-sm);
   font-weight: var(--fw-regular);
   margin-bottom: 1.5rem;
 }
@@ -87,9 +90,46 @@ body {
 }
 
 @media screen and (min-width: 48em) {
-  .header,
-  .main,
+  body {
+    background: var(--primary) url("./images/bg-desktop.svg") top/cover
+      no-repeat;
+  }
+  .hero-banner {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .hero-banner__image {
+    min-width: 0;
+    width: 100%;
+  }
+  .hero-banner__content {
+    flex-basis: 60%;
+    padding: 3rem 0;
+    text-align: left;
+  }
+  .hero-banner__header {
+    font-size: var(--fs-headings-lg);
+  }
+  .hero-banner__button {
+    padding: 0.875rem;
+  }
   .footer {
-    width: calc(100% - 12rem);
+    margin: 2rem auto 0;
+  }
+  .footer__socials {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .header {
+    margin: 4rem auto 0;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .main {
+    margin: 7rem auto 0;
   }
 }
