@@ -21,28 +21,55 @@
     <title>Huddle landing page with single introductory section</title>
   </head>
   <body>
-    <header>
-      <img src="./images/logo.svg" alt="Brand logo" />
+    <header class="header">
+      <a href="#"
+        ><img src="./images/logo.svg" alt="Brand logo" class="header__logo"
+      /></a>
     </header>
     <main class="main">
-      <div>
+      <section class="hero-banner">
         <img
           src="./images/illustration-mockups.svg"
           alt="Mockups of Huddle application"
+          class="hero-banner__image"
         />
-      </div>
-      <div>
-        <h1>Build The Community Your Fans Will Love</h1>
-        <p>
-          Huddle re-imagines the way we build communities. You have a voice, but
-          so does your audience. Create connections with your users as you
-          engage in genuine discussion.
-        </p>
-        <button type="button">Register</button>
-      </div>
+        <div class="hero-banner__content">
+          <h1 class="hero-banner__header">
+            Build The Community Your Fans Will Love
+          </h1>
+          <p class="hero-banner__description">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button type="button" class="hero-banner__button">Register</button>
+        </div>
+      </section>
     </main>
-    <footer>
-      <div>TODO: socials</div>
+    <footer class="footer">
+      <div class="footer__socials">
+        <a href="#" class="footer__socials-link"
+          ><ion-icon
+            class="footer__socials-icon"
+            name="logo-facebook"
+            aria-label="Facebook account link"
+          ></ion-icon
+        ></a>
+        <a href="#" class="footer__socials-link"
+          ><ion-icon
+            class="footer__socials-icon"
+            name="logo-twitter"
+            aria-label="Twitter account link"
+          ></ion-icon
+        ></a>
+        <a href="#" class="footer__socials-link"
+          ><ion-icon
+            class="footer__socials-icon"
+            name="logo-instagram"
+            aria-label="Instagram account link"
+          ></ion-icon
+        ></a>
+      </div>
       <p class="footer__attribution">
         Challenge by
         <a
@@ -58,5 +85,14 @@
         >.
       </p>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
